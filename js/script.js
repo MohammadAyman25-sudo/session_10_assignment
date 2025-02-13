@@ -32,7 +32,6 @@ clear.click(function () {
 del.click(function () {
   let num = $(".result").text();
   $(".result").text(num.slice(0, -1));
-  expression = "";
   opearation.each(function () {
     if ($(".result").text() == "") {
       $(this).prop("disabled", true);
