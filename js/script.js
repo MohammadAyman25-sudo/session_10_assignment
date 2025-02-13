@@ -22,12 +22,18 @@ clear.click(function (){
     $("button").each(function (){
         $(this).prop("disabled", false);
     });
+    if ($(".result").text() == "") {
+      $(this).prop("disabled", true);
+    }
 });
 
 del.click(function (){
     let num = $(".result").text();
     $(".result").text(num.slice(0, -1));
     expression = "";
+    if ($(".result").text() == "") {
+      $(this).prop("disabled", true);
+    }
 });
 
 opearation.each(function(){
